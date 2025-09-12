@@ -1,25 +1,99 @@
 <section class="booking">
   <div class="container">
     <h2>Confidential Booking 🔒</h2>
-    <form>
-      <label>Your Name</label>
-      <input type="text" placeholder="Enter your name" required />
+    <form
+      action="#"
+      method="post"
+      onsubmit="alert('Thank you! Your appointment has been booked.'); return false;"
+    >
+      <label for="name">Your Name</label>
+      <input
+        id="name"
+        type="text"
+        placeholder="Enter your full name"
+        required
+      />
 
-      <label>Email</label>
-      <input type="email" placeholder="Enter your email" required />
+      <label for="email">Email</label>
+      <input id="email" type="email" placeholder="you@example.com" required />
 
       <label>Select Counsellor</label>
-      <select>
-        <option>Dr. A Sharma</option>
-        <option>Dr. B Mehta</option>
-        <option>Dr. C Rao</option>
-      </select>
+      <div class="counsellor-options">
+        <!-- Counsellor Option 1 -->
+        <label>
+          <input
+            type="radio"
+            name="counsellor"
+            value="Dr. A Sharma"
+            checked
+            required
+          />
+          <div class="counsellor-card">
+            <svg
+              class="person-icon"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+            >
+              <path
+                d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"
+              />
+            </svg>
+            <span class="counsellor-name">Dr. A Sharma</span>
+            <p class="counsellor-info">
+              Specializes in cognitive behavioral therapy.
+            </p>
+          </div>
+        </label>
 
-      <label>Preferred Date</label>
-      <input type="date" required />
+        <!-- Counsellor Option 2 -->
+        <label>
+          <input type="radio" name="counsellor" value="Dr. B Mehta" required />
+          <div class="counsellor-card">
+            <svg
+              class="person-icon"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+            >
+              <path
+                d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"
+              />
+            </svg>
+            <span class="counsellor-name">Dr. B Mehta</span>
+            <p class="counsellor-info">
+              Focuses on mindfulness & stress reduction.
+            </p>
+          </div>
+        </label>
 
-      <label>Preferred Time</label>
-      <input type="time" required />
+        <!-- Counsellor Option 3 -->
+        <label>
+          <input type="radio" name="counsellor" value="Dr. C Rao" required />
+          <div class="counsellor-card">
+            <svg
+              class="person-icon"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+            >
+              <path
+                d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"
+              />
+            </svg>
+            <span class="counsellor-name">Dr. C Rao</span>
+            <p class="counsellor-info">
+              Expert in relationship and family counseling.
+            </p>
+          </div>
+        </label>
+      </div>
+
+      <label for="date">Preferred Date</label>
+      <input id="date" type="date" required />
+
+      <label for="time">Preferred Time</label>
+      <input id="time" type="time" required />
 
       <button class="btn">Book Appointment</button>
     </form>

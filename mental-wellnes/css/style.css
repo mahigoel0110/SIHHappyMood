@@ -37,7 +37,7 @@ h3 {
 
 /* Apply a base font to the entire page */
 body {
-  font-family: 'Segoe UI', sans-serif;
+  font-family: "Segoe UI", sans-serif;
   /* IMPORTANT: Add padding to prevent content from hiding under the fixed navbar */
   /* You may need to adjust this value based on the final height of your navbar */
   padding-top: 80px;
@@ -72,7 +72,6 @@ body {
   font-weight: 700;
   color: #2563eb;
   text-decoration: none;
-  
 }
 
 .nav-menu {
@@ -364,7 +363,6 @@ body {
 ========================= */
 .resources {
   padding: 3rem 3rem;
-
 }
 
 .resources ul {
@@ -382,7 +380,7 @@ body {
 }
 
 .community.body {
-  font-family: 'Segoe UI', sans-serif;
+  font-family: "Segoe UI", sans-serif;
   background-color: #e6f0ff; /* pastel blue background */
   color: #333;
   margin: 0;
@@ -395,7 +393,7 @@ body {
   background: #ffffff;
   padding: 25px;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .community.h2 {
@@ -411,7 +409,8 @@ body {
   border-left: 4px solid #2a5d9f;
 }
 
-.community.textarea, input {
+.community.textarea,
+input {
   width: 100%;
   padding: 10px;
   margin: 8px 0;
@@ -420,7 +419,8 @@ body {
   font-size: 14px;
 }
 
-.community.button, .btn {
+.community.button,
+.btn {
   background: #2a5d9f;
   color: white;
   border: none;
@@ -430,7 +430,8 @@ body {
   transition: background 0.3s ease;
 }
 
-.community.button:hover, .btn:hover {
+.community.button:hover,
+.btn:hover {
   background: #204879;
 }
 
@@ -479,11 +480,9 @@ footer {
   font-size: 0.9rem;
 }
 
-
 /* ===============================
    😊 Mood Tracker 
    =============================== */
-
 
 /* Smaller buttons */
 .mood-btn {
@@ -527,11 +526,9 @@ footer {
   transition: background-color 0.3s ease;
 }
 
-
-
 /* General Page Styling */
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background: #f3f9f7;
   color: #333;
   margin: 0;
@@ -557,7 +554,7 @@ body {
   border-radius: 12px;
   padding: 25px;
   margin-bottom: 30px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .resource-box h3 {
@@ -603,7 +600,7 @@ body {
 .wellness-section {
   display: grid;
   grid-template-columns: 1fr 1fr; /* left + right */
-  grid-template-rows: 1fr 1fr;    /* breathing + meditation */
+  grid-template-rows: 1fr 1fr; /* breathing + meditation */
   gap: 20px;
   height: 110vh; /* adjustable */
   margin-top: 30px;
@@ -617,21 +614,21 @@ body {
   background: #d1fae5; /* soft green */
   border-radius: 15px;
   padding: 20px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .wellness-section .breathing {
   background: #bfdbfe; /* soft blue */
   border-radius: 15px;
   padding: 20px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .wellness-section .meditation {
   background: #fbcfe8; /* soft pink */
   border-radius: 15px;
   padding: 20px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .wellness-section h2 {
@@ -640,7 +637,7 @@ body {
   color: #333;
 }
 .breathing {
-  text-align:center;
+  text-align: center;
 }
 
 .breathing-circle {
@@ -672,4 +669,335 @@ body {
 }
 #startBreathing:hover {
   background: #2563eb;
+}
+:root {
+  --background-color: #f0f4f8; /* Light pastel blue-gray */
+  --card-background: #ffffff;
+  --primary-accent: #a7c7e7; /* Pastel blue */
+  --secondary-accent: #e0bbe4; /* Pastel purple */
+  --text-color: #333d4b;
+  --subtle-text-color: #7a8b99;
+  --shadow-color: rgba(122, 139, 153, 0.15);
+  --font-family: "Poppins", sans-serif;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--background-color);
+  color: var(--text-color);
+  margin: 0;
+  min-height: 100vh;
+}
+
+/* --- STYLES FOR YOUR EXISTING APP STRUCTURE --- */
+#app-container {
+  padding: 20px;
+}
+
+main#content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px; /* Adds space between the journal and other wellness sections */
+}
+
+/* A main wrapper for layout, so your component and the entries list are grouped */
+.journal-wrapper {
+  width: 100%;
+  max-width: 600px;
+}
+
+/* --- JOURNAL COMPONENT STYLES --- */
+.journal .container {
+  background: var(--card-background);
+  border-radius: 20px;
+  padding: 30px 40px;
+  box-shadow: 0 10px 30px var(--shadow-color);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.journal .container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px var(--shadow-color);
+}
+
+.journal h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: var(--text-color);
+}
+
+.journal p {
+  color: var(--subtle-text-color);
+  margin-bottom: 25px;
+  font-size: 1.1rem;
+}
+
+.journal textarea {
+  width: 100%;
+  min-height: 150px;
+  border: 2px solid #d4e7f5;
+  border-radius: 15px;
+  padding: 15px;
+  font-family: var(--font-family);
+  font-size: 1rem;
+  resize: vertical;
+  margin-bottom: 20px; /* Corrected from 'margin: 20px' to center the element */
+  box-sizing: border-box;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.journal textarea::placeholder {
+  color: #b0bec5;
+}
+
+.journal textarea:focus {
+  outline: none;
+  border-color: var(--primary-accent);
+  box-shadow: 0 0 0 4px rgba(167, 199, 231, 0.4);
+}
+
+.journal .btn {
+  background: linear-gradient(
+    45deg,
+    var(--primary-accent),
+    var(--secondary-accent)
+  );
+  color: rgb(17, 20, 21);
+  padding: 15px 30px;
+  border: none;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  letter-spacing: 0.5px;
+}
+
+.journal .btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 7px 20px rgba(0, 0, 0, 0.15);
+}
+
+.journal .btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* --- SAVED ENTRIES SECTION --- */
+#journal-entries {
+  margin-top: 40px;
+}
+
+.entry {
+  background: var(--card-background);
+  border-radius: 15px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 5px 15px var(--shadow-color);
+  text-align: left;
+  opacity: 0;
+  animation: fadeIn 0.5s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.entry .entry-date {
+  font-weight: 600;
+  color: var(--primary-accent);
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+}
+
+.entry .entry-text {
+  color: var(--subtle-text-color);
+  white-space: pre-wrap;
+  line-height: 1.6;
+}
+
+/* --- Booking Section & Container --- */
+.booking {
+  width: 100%;
+  max-width: 500px;
+}
+
+.container {
+  background-color: var(--form-bg-color);
+  padding: 2.5rem; /* More spacious padding */
+  border-radius: 16px; /* Softer, more modern rounded corners */
+  box-shadow: 0 10px 25px -5px var(--shadow-color),
+    0 8px 10px -6px var(--shadow-color);
+  border: 1px solid #e2e8f0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 30px -10px var(--shadow-color),
+    0 10px 15px -8px var(--shadow-color);
+}
+
+/* --- Form Elements Styling --- */
+h2 {
+  text-align: center;
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: var(--text-color);
+}
+
+form {
+  display: grid;
+  gap: 1.25rem; /* Consistent spacing between form elements */
+}
+
+label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--label-color);
+  margin-bottom: -0.75rem; /* Pull label closer to its input */
+}
+
+input,
+select {
+  width: 100%;
+  padding: 0.875rem 1rem;
+  font-size: 1rem;
+  font-family: var(--font-family);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  background-color: #f8fafc;
+  color: var(--text-color);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  /* Use accent-color to style native UI like date picker icon */
+  accent-color: var(--primary-color);
+}
+
+/* --- Focus state for better accessibility --- */
+input:focus,
+select:focus {
+  outline: none;
+  border-color: var(--border-focus-color);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+input::placeholder {
+  color: #94a3b8;
+}
+
+/* --- Button Styling --- */
+.btn {
+  background-image: linear-gradient(to right, var(--primary-color), #60a5fa);
+  color: white;
+  border: none;
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1rem; /* Add some space above the button */
+  background-size: 200% auto;
+}
+
+.btn:hover {
+  background-position: right center; /* Change gradient direction on hover */
+  box-shadow: 0 4px 15px 0 rgba(59, 130, 246, 0.4);
+  transform: translateY(-2px);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+/* --- Counsellor Cards --- */
+.counsellor-options {
+  display: grid;
+  /* Creates a responsive grid that wraps columns automatically */
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1rem;
+  margin-top: -0.5rem; /* Adjust spacing with label */
+}
+
+.counsellor-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 1rem;
+  border: 2px solid var(--border-color);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  background-color: #f8fafc;
+  position: relative; /* For a clean focus outline */
+}
+
+.counsellor-card:hover {
+  border-color: var(--primary-color);
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.counsellor-name {
+  font-weight: 600;
+  margin-top: 0.5rem;
+  color: var(--text-color);
+  font-size: 0.9rem;
+}
+
+.counsellor-info {
+  font-size: 0.8rem;
+  color: var(--label-color);
+  margin-top: 0.25rem;
+  line-height: 1.4;
+  flex-grow: 1; /* Helps align items in case of uneven text length */
+}
+
+.person-icon {
+  width: 40px;
+  height: 40px;
+  fill: var(--label-color);
+  transition: fill 0.2s ease-in-out;
+}
+
+/* Visually hide the actual radio button */
+.counsellor-options input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* Style for the selected card */
+.counsellor-options input[type="radio"]:checked + .counsellor-card {
+  border-color: var(--primary-color);
+  background-color: #eff6ff; /* A very light blue */
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+.counsellor-options
+  input[type="radio"]:checked
+  + .counsellor-card
+  .person-icon {
+  fill: var(--primary-color);
+}
+
+/* A subtle focus ring on the card itself for accessibility */
+.counsellor-options input[type="radio"]:focus-visible + .counsellor-card {
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.4);
 }
