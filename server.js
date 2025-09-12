@@ -13,10 +13,13 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'mental-wellnes', 'index.html'));
 });
 
+// Route for PHQ-9, which will now display the Pomofocus timer
+app.get('/phq-9', (req, res) => {
+  res.sendFile(path.join(__dirname, 'mental-wellnes', 'pomofocus.html'));
+});
+
 // Start server
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`✅ Server running at http://localhost:${PORT}`);
 });
-
-

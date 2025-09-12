@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomofocus - Mental Wellness</title>
+    <link rel="stylesheet" href="/css/pomofocus.css">
+    <link rel="stylesheet" href="/css/style.css"> </head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <a href="/" class="logo">Mental Wellness</a>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/pomofocus">Pomofocus</a></li>
+                </ul>
+        </nav>
+    </header>
+
+    <main class="pomodoro-container">
+        <h1>Pomodoro Timer</h1>
+        <div class="timer-display">
+            <span id="minutes">25</span>:<span id="seconds">00</span>
+        </div>
+        <div class="timer-controls">
+            <button id="start-btn">Start</button>
+            <button id="pause-btn" style="display: none;">Pause</button>
+            <button id="reset-btn">Reset</button>
+        </div>
+        <div class="session-type">
+            <button id="pomodoro-btn" class="active">Pomodoro</button>
+            <button id="short-break-btn">Short Break</button>
+            <button id="long-break-btn">Long Break</button>
+        </div>
+        <audio id="timer-sound" src="/audio/bell.mp3"></audio> </main>
+
+    <script src="/js/pomofocus.js"></script>
+</body>
+</html>
