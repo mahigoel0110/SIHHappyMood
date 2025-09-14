@@ -51,7 +51,13 @@
     Your daily mood insights will appear here 🌿
   </p>
 </div>
-<li><a href="/phq-9">PHQ-9 Test</a></li>
+
+<div class="phq9-section">
+  <h2>Take the PHQ-9 Assessment</h2>
+  <p>Check your mental well-being with our professional screening tool</p>
+  <a href="components/phq9.html" class="phq9-button">Start PHQ-9 Test</a>
+</div>
+
 <!-- Styling -->
 <style>
 .mood-tracker {
@@ -89,6 +95,43 @@
 .mood-emojis button:hover {
   transform: scale(1.15);
   background: #f3f4f6;
+}
+
+.phq9-section {
+  background: #e0e7ff;  /* soft indigo */
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: center;
+  margin-top: 20px;
+}
+
+.phq9-section h2 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: #3730a3;
+}
+
+.phq9-section p {
+  color: #4338ca;
+  margin-bottom: 15px;
+}
+
+.phq9-button {
+  display: inline-block;
+  background: #4f46e5;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.phq9-button:hover {
+  background: #4338ca;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.2);
 }
 </style>
 
